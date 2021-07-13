@@ -31,5 +31,10 @@ public class MoodAnalysisTest {
 		MoodAnalyserImpl moodAnalyse = new MoodAnalyserImpl("i am in sad mood");
 		Assert.assertEquals("sad",moodAnalyse.analyseMood());
 	}
-	
+	@Test
+	public void givenMessageInConstructor_WhenHappy_ShouldReturnHappy()
+	{
+		MoodAnalyserImpl moodAnalyse = new MoodAnalyserImpl("i am in happy mood");		
+		Assert.assertEquals("happy",moodAnalyse.analyseMood());
+	}
 }

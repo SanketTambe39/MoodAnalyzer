@@ -1,5 +1,5 @@
 package moodanalyzerproblem;
 
 public interface MoodAnalyserService {
-	public String analyseMood(String message);
+	public String analyseMood(String message) throws MoodAnalyseException;
 }

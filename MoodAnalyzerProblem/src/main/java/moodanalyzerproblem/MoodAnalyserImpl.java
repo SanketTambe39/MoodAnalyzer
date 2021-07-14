@@ -19,19 +19,13 @@ public class MoodAnalyserImpl implements MoodAnalyserService {
 
 	@Override
 	public String analyseMood(String message) throws MoodAnalyseException {
-		try
-		{
-			if(message.contains("sad"))
-			{
+		try {
+			if (message.contains("sad")) {
 				return "sad";
-			}
-			else
-			{
+			} else {
 				return "happy";
 			}
-		}
-		catch (NullPointerException e) 
-		{
+		} catch (NullPointerException e) {
 			throw new MoodAnalyseException("message cannot be null");
 		}
 	}
